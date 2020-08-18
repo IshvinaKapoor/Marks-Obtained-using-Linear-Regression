@@ -7,7 +7,7 @@
 import streamlit as st
 import pickle
 import numpy as np
-model=pickle.load(open('lr_model.pkl','rb'))
+lr_model=pickle.load(open('lr_model.pkl','rb'))
 
 
 def predict_marks(hours):
