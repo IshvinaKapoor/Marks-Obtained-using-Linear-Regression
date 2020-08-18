@@ -12,7 +12,7 @@ lr_model=pickle.load(open('lr_model.pkl','rb'))
 
 def predict_marks(hours):
     input=np.array([[hours]]).astype(np.float64)
-    prediction=lr_model.predict_proba(input)
+    prediction=lr_model.predict(input)
     pred='{0:.{1}f}'.format(prediction[0][0], 2)
     return float(pred)
 
